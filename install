@@ -3,6 +3,9 @@ echo "now you are going to install Nmap-auto"
 sleep 2s
 pkg install nmap
 pip install colorama
+pip install bs4
+sleep 1s
+pip install urllib
 sleep 2s
 echo "Now, you can use this tool for scanning"
 echo "Remember use for purposes and keep your Etical Hacking"
