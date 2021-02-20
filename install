@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "now you are going to install Nmap-auto"
+sleep 2s
+pkg install nmap
+pip install colorama
+sleep 2s
+echo "Now, you can use this tool for scanning"
+echo "Remember use for purposes and keep your Etical Hacking"
