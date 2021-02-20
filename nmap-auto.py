@@ -97,7 +97,7 @@ elif options==9:
 	import subprocess
 	subprocess.call(f'sudo nmap -v {URL}', shell = True)
 
-elif options==10;
+elif options==10:
 	URL = str(input("Type here your Address/IP to scan: "))
 	Port = str(input("Type here your Range to Scan (ex: 20-30): "))
 	import subprocess
