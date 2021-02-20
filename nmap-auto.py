@@ -30,6 +30,7 @@ menu = """
 8- Scanning for detect operative system.
 9- Scanning in information mode.
 10- Scanning with Port Range.
+11- Scan your network(search for intruders)
 """
 print(menu)
 
@@ -103,6 +104,11 @@ elif options==10:
 	Port = str(input("Type here your Range to Scan (ex: 20-30): "))
 	import subprocess
 	subprocess.call(f'sudo nmap -p {Port} {URL}', shell = True)
+
+elif options==11:
+	URL = str(input("Type here your Address/IP to scan: "))
+	import subprocess
+	subprocess.call(f'sudo nmap -sn {URL}/24', shell = True)
 
 else:
 	print("Error XD")
