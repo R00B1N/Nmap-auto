@@ -1,3 +1,6 @@
+#!/usr/bin/python
+from bs4 import BeautifulSoup
+import urllib.request, urllib.error, urllib.parse
 import subprocess
 import time
 from colorama import Fore, init
@@ -29,6 +32,7 @@ menu = """
 8- Scanning for detect operative system.
 9- Scanning in information mode.
 10- Scanning with Port Range.
+11- Scrapping site.
 """
 print(menu)
 
@@ -103,6 +107,14 @@ elif options==10:
 	import subprocess
 	subprocess.call(f'sudo nmap -p {Port} {URL}', shell = True)
 
+elif options==11:
+	web_to = input("Type here the URL to scan ex (https://example.com): ")
+	time.sleep(1)
+	data = urllib.request.urlopen(web_to).read().decode()
+	scrap = BeautifulSoup(data, 'html.parser')
+	tags = scrap('a')
+	for tag in tags:
+		print(tag.get('href'))
 
 else:
 	print("Error XD")
