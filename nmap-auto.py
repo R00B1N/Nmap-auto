@@ -38,12 +38,12 @@ options = int(input("Choose an option: "))
 if options==1:
 	URL = str(input("Type here your Address/IP to scan: "))
 	import subprocess
-	subprocess.call(f'nmap -sT {URL}', shell = True)
+	subprocess.call(f'sudo nmap -sT {URL}', shell = True)
 
 elif options==2:
 	URL = str(input("Type here your Address/IP to scan: "))
 	import subprocess
-	subprocess.call(f'nmap -sS {URL}', shell = True)
+	subprocess.call(f'sudo nmap -sS {URL}', shell = True)
 
 elif options==3:
 	mode = """
